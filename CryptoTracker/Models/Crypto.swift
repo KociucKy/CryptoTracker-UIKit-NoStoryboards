@@ -1,5 +1,7 @@
 import Foundation
 
-struct Crypto{
-    
+struct Crypto: Codable{
+    let currency: String
+    let name: String
+    let logo_url: String
 }
