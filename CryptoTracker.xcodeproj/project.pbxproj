@@ -20,6 +20,10 @@
 		88B8858726FB5D59008EC7FE /* CVBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8858626FB5D59008EC7FE /* CVBodyLabel.swift */; };
 		88B8858926FB5D69008EC7FE /* CVRatioLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8858826FB5D69008EC7FE /* CVRatioLabel.swift */; };
 		88B8858B26FB5D82008EC7FE /* CVCryptoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8858A26FB5D82008EC7FE /* CVCryptoCell.swift */; };
+		88B8858D26FB76F3008EC7FE /* CVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8858C26FB76F3008EC7FE /* CVError.swift */; };
+		88B8859026FB8024008EC7FE /* CVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8858F26FB8024008EC7FE /* CVButton.swift */; };
+		88B8859326FB80D1008EC7FE /* CVAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8859226FB80D1008EC7FE /* CVAlert.swift */; };
+		88B8859526FB8477008EC7FE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8859426FB8477008EC7FE /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		88B8858626FB5D59008EC7FE /* CVBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVBodyLabel.swift; sourceTree = "<group>"; };
 		88B8858826FB5D69008EC7FE /* CVRatioLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVRatioLabel.swift; sourceTree = "<group>"; };
 		88B8858A26FB5D82008EC7FE /* CVCryptoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCryptoCell.swift; sourceTree = "<group>"; };
+		88B8858C26FB76F3008EC7FE /* CVError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVError.swift; sourceTree = "<group>"; };
+		88B8858F26FB8024008EC7FE /* CVButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVButton.swift; sourceTree = "<group>"; };
+		88B8859226FB80D1008EC7FE /* CVAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVAlert.swift; sourceTree = "<group>"; };
+		88B8859426FB8477008EC7FE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +78,7 @@
 		88B8855C26FB5AA9008EC7FE /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
-				88B8857826FB5C8D008EC7FE /* AppDelegate */,
+				88B8857826FB5C8D008EC7FE /* Utilities */,
 				88B8857726FB5C67008EC7FE /* Managers */,
 				88B8857326FB5C4D008EC7FE /* Models */,
 				88B8857426FB5C54008EC7FE /* Custom Views */,
@@ -91,6 +99,8 @@
 		88B8857426FB5C54008EC7FE /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				88B8859126FB80BE008EC7FE /* Alert */,
+				88B8858E26FB8012008EC7FE /* Buttons */,
 				88B8858126FB5D05008EC7FE /* Views */,
 				88B8858026FB5D01008EC7FE /* Labels */,
 				88B8857F26FB5CFB008EC7FE /* Cells */,
@@ -125,13 +135,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		88B8857826FB5C8D008EC7FE /* AppDelegate */ = {
+		88B8857826FB5C8D008EC7FE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				88B8855D26FB5AA9008EC7FE /* AppDelegate.swift */,
 				88B8855F26FB5AA9008EC7FE /* SceneDelegate.swift */,
+				88B8858C26FB76F3008EC7FE /* CVError.swift */,
+				88B8859426FB8477008EC7FE /* UIViewController+Ext.swift */,
 			);
-			path = AppDelegate;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		88B8857F26FB5CFB008EC7FE /* Cells */ = {
@@ -158,6 +170,22 @@
 				88B8858226FB5D32008EC7FE /* CVLabelsContainer.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		88B8858E26FB8012008EC7FE /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				88B8858F26FB8024008EC7FE /* CVButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		88B8859126FB80BE008EC7FE /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				88B8859226FB80D1008EC7FE /* CVAlert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,11 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B8858D26FB76F3008EC7FE /* CVError.swift in Sources */,
 				88B8858526FB5D4D008EC7FE /* CVTitleLabel.swift in Sources */,
+				88B8859526FB8477008EC7FE /* UIViewController+Ext.swift in Sources */,
 				88B8858B26FB5D82008EC7FE /* CVCryptoCell.swift in Sources */,
 				88B8858926FB5D69008EC7FE /* CVRatioLabel.swift in Sources */,
+				88B8859326FB80D1008EC7FE /* CVAlert.swift in Sources */,
 				88B8857C26FB5CC4008EC7FE /* Crypto.swift in Sources */,
 				88B8858326FB5D32008EC7FE /* CVLabelsContainer.swift in Sources */,
+				88B8859026FB8024008EC7FE /* CVButton.swift in Sources */,
 				88B8858726FB5D59008EC7FE /* CVBodyLabel.swift in Sources */,
 				88B8857A26FB5CB0008EC7FE /* NetworkManager.swift in Sources */,
 				88B8855E26FB5AA9008EC7FE /* AppDelegate.swift in Sources */,

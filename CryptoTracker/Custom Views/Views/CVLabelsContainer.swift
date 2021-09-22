@@ -12,7 +12,6 @@ class CVLabelsContainer: UIView {
     
     
     private func configure(){
-        backgroundColor = .systemPink
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

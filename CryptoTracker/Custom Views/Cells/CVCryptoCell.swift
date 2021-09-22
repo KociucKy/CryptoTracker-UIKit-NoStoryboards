@@ -19,7 +19,12 @@ class CVCryptoCell: UITableViewCell {
     
     
     func set(crypto: Crypto){
-        #warning("Func Set not done")
+        let cryptoPriceAsFloat = Float(crypto.price) ?? 0.00
+        let cryptoPrice = String(format: "%.2f", cryptoPriceAsFloat)
+        
+        nameLabel.text = crypto.name
+        shortNameLabel.text = crypto.currency
+        ratioLabel.text = "$\(cryptoPrice)"
     }
     
     private func configureCell(){
