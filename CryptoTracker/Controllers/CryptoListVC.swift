@@ -3,15 +3,16 @@ import UIKit
 class CryptoListVC: UIViewController {
     //MARK: - Properties
     var cryptoTableView: UITableView!
-    var cryptoNames = ["BitCoin", "Etherium", "DogeCoin", "LiteCoin"]
-    var cryptoShortNames = ["BTC", "ETH", "DOGE", "LTC"]
-    var cryptoObjects: [Crypto] = []
+    var cryptoObjects: [Crypto]     = []
+    var filteredCryptos: [Crypto]   = []
+    var isSearching                 = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureVC()
         configureTableView()
         getCryptos()
+        configureSearchController()
     }
     
     
@@ -54,6 +55,17 @@ class CryptoListVC: UIViewController {
             }
         }
     }
+    
+    
+    func configureSearchController(){
+        let searchController = UISearchController()
+        searchController.searchResultsUpdater                   = self
+        searchController.searchBar.delegate                     = self
+        searchController.searchBar.placeholder                  = "Search for a crypto"
+        navigationItem.searchController                         = searchController
+        searchController.obscuresBackgroundDuringPresentation   = false
+        navigationItem.hidesSearchBarWhenScrolling              = false
+    }
 }
 
 
@@ -64,13 +76,28 @@ extension CryptoListVC: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cryptoObjects.count
+        let activeArray = isSearching ? filteredCryptos : cryptoObjects
+        return activeArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = cryptoTableView.dequeueReusableCell(withIdentifier: CVCryptoCell.reuseID, for: indexPath) as! CVCryptoCell
-        cell.set(crypto: cryptoObjects[indexPath.row])
+        let cell        = cryptoTableView.dequeueReusableCell(withIdentifier: CVCryptoCell.reuseID, for: indexPath) as! CVCryptoCell
+        let activeArray = isSearching ? filteredCryptos : cryptoObjects
+        
+        cell.set(crypto: activeArray[indexPath.row])
         return cell
+    }
+}
+
+
+//MARK: - UISearchController Methods
+extension CryptoListVC: UISearchResultsUpdating, UISearchBarDelegate{
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        isSearching = true
+        filteredCryptos = cryptoObjects.filter{ $0.name.lowercased().contains(filter.lowercased())}
+        cryptoTableView.reloadData()
+            
     }
     
     
