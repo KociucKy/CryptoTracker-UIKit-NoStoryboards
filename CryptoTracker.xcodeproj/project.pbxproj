@@ -24,6 +24,7 @@
 		88B8859026FB8024008EC7FE /* CVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8858F26FB8024008EC7FE /* CVButton.swift */; };
 		88B8859326FB80D1008EC7FE /* CVAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8859226FB80D1008EC7FE /* CVAlert.swift */; };
 		88B8859526FB8477008EC7FE /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8859426FB8477008EC7FE /* UIViewController+Ext.swift */; };
+		88B8859926FC92E2008EC7FE /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8859826FC92E2008EC7FE /* DetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		88B8858F26FB8024008EC7FE /* CVButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVButton.swift; sourceTree = "<group>"; };
 		88B8859226FB80D1008EC7FE /* CVAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVAlert.swift; sourceTree = "<group>"; };
 		88B8859426FB8477008EC7FE /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		88B8859826FC92E2008EC7FE /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				88B8857D26FB5CED008EC7FE /* CryptoListVC.swift */,
+				88B8859826FC92E2008EC7FE /* DetailsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				88B8858526FB5D4D008EC7FE /* CVTitleLabel.swift in Sources */,
 				88B8859526FB8477008EC7FE /* UIViewController+Ext.swift in Sources */,
 				88B8858B26FB5D82008EC7FE /* CVCryptoCell.swift in Sources */,
+				88B8859926FC92E2008EC7FE /* DetailsVC.swift in Sources */,
 				88B8858926FB5D69008EC7FE /* CVRatioLabel.swift in Sources */,
 				88B8859326FB80D1008EC7FE /* CVAlert.swift in Sources */,
 				88B8857C26FB5CC4008EC7FE /* Crypto.swift in Sources */,

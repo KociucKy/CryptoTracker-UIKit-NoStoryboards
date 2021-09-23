@@ -87,6 +87,17 @@ extension CryptoListVC: UITableViewDataSource, UITableViewDelegate{
         cell.set(crypto: activeArray[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let activeArray = isSearching ? filteredCryptos : cryptoObjects
+        let crypto = activeArray[indexPath.row]
+        
+        let destVC = DetailsVC()
+        destVC.name = crypto.name
+        let navController = UINavigationController(rootViewController: destVC)
+        present(navController, animated: true)
+        cryptoTableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 
@@ -97,8 +108,10 @@ extension CryptoListVC: UISearchResultsUpdating, UISearchBarDelegate{
         isSearching = true
         filteredCryptos = cryptoObjects.filter{ $0.name.lowercased().contains(filter.lowercased())}
         cryptoTableView.reloadData()
-            
     }
     
-    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = false
+        cryptoTableView.reloadData()
+    }
 }

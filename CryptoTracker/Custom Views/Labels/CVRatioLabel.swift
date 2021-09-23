@@ -19,7 +19,7 @@ class CVRatioLabel: UILabel {
     
     private func configure(){
         textColor                   = .systemGreen
-        font                        = UIFont.preferredFont(forTextStyle: .body)
+        font                        = UIFont.preferredFont(forTextStyle: .headline)
         adjustsFontSizeToFitWidth   = true
         minimumScaleFactor          = 0.9
         translatesAutoresizingMaskIntoConstraints = false

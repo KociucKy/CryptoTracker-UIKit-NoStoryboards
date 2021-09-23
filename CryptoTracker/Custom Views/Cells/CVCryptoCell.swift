@@ -32,6 +32,7 @@ class CVCryptoCell: UITableViewCell {
         labelsContainer.addSubview(shortNameLabel)
         addSubview(labelsContainer)
         addSubview(ratioLabel)
+        accessoryType = .disclosureIndicator
         
         setContainerConstraints()
         setRatioLabelConstraints()
