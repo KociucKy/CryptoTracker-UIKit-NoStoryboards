@@ -12,8 +12,6 @@ As the title suggests, Cryptex can be used to track current ratio of almost 100 
 4. Support for both light and dark mode,
 5. Use Nomics API to get the data.
 <br>
-<br>
-<br>
 
 ### How to install
 1. You will have to get your own Nomics API key and change one method inside NetworkManager.swift file (it is commented, to make it easier).
