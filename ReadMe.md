@@ -20,6 +20,9 @@ As the title suggests, Cryptex can be used to track current ratio of almost 100 
 2. Clone this repo to Xcode.
 3. Choose the Simulator.
 4. Hit Run button.
+<br>
+<br>
+<br>
 
 
 ### Screenshots
