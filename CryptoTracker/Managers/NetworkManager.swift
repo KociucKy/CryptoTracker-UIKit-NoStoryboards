@@ -1,8 +1,8 @@
 import Foundation
 
 class NetworkManager{
-    static let shared = NetworkManager()
-    private let baseURL = "https://api.nomics.com/v1/currencies/ticker?key="
+    static let shared       = NetworkManager()
+    private let cryptoURL   = "https://api.nomics.com/v1/currencies/ticker?key="
     
     private init(){}
     
@@ -16,7 +16,7 @@ class NetworkManager{
     
     func getCurrencies(completed: @escaping (Result<[Crypto], CVError>) -> Void){
         let apiKey = valueForAPIKey(named: "API_CLIENT_ID")
-        let endpoint = baseURL + "\(apiKey)&per-page=100&page=1&status=active&sort=rank"
+        let endpoint = cryptoURL + "\(apiKey)&per-page=100&page=1&status=active&sort=rank"
         
         guard let url = URL(string: endpoint) else{
             completed(.failure(.unableToComplete))
