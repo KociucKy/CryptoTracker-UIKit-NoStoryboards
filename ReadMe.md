@@ -16,7 +16,7 @@ As the title suggests, Cryptex can be used to track current ratio of almost 100 
 <br>
 
 ### Screenshots
-<img src="ReadMe/MainScreen-Light.png" width="842" height="1589">
+<img src="ReadMe/MainScreen-Light.png" width="561.33" height="1059.33">
 ![DarkModeMain](ReadMe/MainScreen-Dark.png =428x926)
 ![DarkModeSearch](ReadMe/SearchScreen-Dark.png =428x926)
 
