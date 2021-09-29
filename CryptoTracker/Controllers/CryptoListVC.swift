@@ -87,17 +87,6 @@ extension CryptoListVC: UITableViewDataSource, UITableViewDelegate{
         cell.set(crypto: activeArray[indexPath.row])
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let activeArray = isSearching ? filteredCryptos : cryptoObjects
-        let crypto = activeArray[indexPath.row]
-        
-        let destVC = DetailsVC()
-        destVC.name = crypto.name
-        let navController = UINavigationController(rootViewController: destVC)
-        present(navController, animated: true)
-        cryptoTableView.deselectRow(at: indexPath, animated: true)
-    }
 }
 
 
