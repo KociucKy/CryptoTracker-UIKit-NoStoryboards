@@ -15,6 +15,13 @@ As the title suggests, Cryptex can be used to track current ratio of almost 100 
 <br>
 <br>
 
+### How to install
+1. You will have to get your own Nomics API key and change one method inside NetworkManager.swift file (it is commented, to make it easier).
+2. Clone this repo to Xcode.
+3. Choose the Simulator.
+4. Hit Run button.
+
+
 ### Screenshots
 <img src="ReadMe/MainScreen-Light.png" width="421" height="784.5"><img src="ReadMe/MainScreen-Dark.png" width="421" height="794.5">
 <img src="ReadMe/SearchScreen-Dark.png" width="421" height="794.5">
@@ -22,8 +29,3 @@ As the title suggests, Cryptex can be used to track current ratio of almost 100 
 <br>
 <br>
 
-### How to install
-1. You will have to get your own Nomics API key and change one method inside NetworkManager.swift file (it is commented, to make it easier).
-2. Clone this repo to Xcode.
-3. Choose the Simulator.
-4. Hit Run button.
